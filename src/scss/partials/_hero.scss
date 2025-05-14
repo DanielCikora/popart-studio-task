@@ -1,0 +1,107 @@
+@use "variables";
+@use "mediaQueries";
+.hero {
+  position: relative;
+}
+.hero__content {
+  display: flex;
+  position: relative;
+}
+.hero__text {
+  padding: 278px 60px;
+  max-width: 1620px;
+  width: 100%;
+  margin: 0 auto;
+}
+.hero__text-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+}
+.hero__text-title {
+  font-size: 113px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin: 0 0 20px 0;
+  &--highlighted {
+    color: variables.$neonGreen;
+  }
+}
+.hero__text-body {
+  position: relative;
+  max-width: 657px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 27px 0;
+  justify-self: end;
+}
+.hero__text-paragraph {
+  margin: 0;
+}
+.hero__text-cta {
+  max-width: fit-content;
+}
+.hero__icon-septagon {
+  max-width: 60px;
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  animation: floatAround 10s ease-in-out infinite;
+  will-change: transform;
+}
+.hero__icon-hexagon {
+  max-width: 114px;
+  position: absolute;
+  left: 35%;
+  bottom: 25%;
+  z-index: -2;
+  animation: spinFloatAround 20s ease-in-out infinite;
+  will-change: transform;
+}
+.hero__text-icon-septagon {
+  max-width: 70px;
+  position: absolute;
+  z-index: -2;
+  left: 35%;
+  transform: translateX(-50%);
+  bottom: -30%;
+  animation: pulsate 5s ease-in-out infinite;
+  will-change: transform;
+}
+// Media Queries
+@include mediaQueries.Desktop {
+  .hero__text-title {
+    font-size: 80px;
+  }
+}
+@include mediaQueries.Laptop {
+  .hero__text {
+    padding: 182px 50px;
+  }
+  .hero__text-title {
+    font-size: 60px;
+  }
+}
+@include mediaQueries.Tablet {
+  .hero__text-body {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__text-title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .hero__icon-hexagon {
+    bottom: 5%;
+    left: 10%;
+  }
+}
+@include mediaQueries.MobileL {
+  .hero__text-title {
+    font-size: 32px;
+  }
+}

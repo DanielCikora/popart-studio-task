@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PopArt Studio task created by Daniel Cikora using Vanilla JS, GULP, SASS, HTML"
+    />
     <title>PopArt Studio Task</title>
     <link
       href="https://fonts.cdnfonts.com/css/aspergit?styles=37793,37790,37791,37792,37788,37789"
@@ -13,29 +17,144 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/dist/css/main.css" />
-    <script src="/dist/js/main.js"></script>
+    <script src="/dist/js/main.js" defer></script>
+    <meta name="author" content="Daniel Cikora" />
+    <meta
+      name="keywords"
+      content="PopArt Studio, task, Vanilla JS, GULP, SASS, HTML"
+    />
+    <meta name="robots" content="index, follow" />
   </head>
   <body>
     <header>
       <nav class="navigation">
-        <a href="#">
-          <img
-            class="navigation__image"
-            src="src/images/logo-image.png"
-            alt="main-logo"
-          />
-      </a>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Home</a>
-          </li class="navigation__item">
-          <li><a href="#" class="navigation__link">Documentation</a></li>
-        </ul>
+        <div class="navigation__content">
+          <a class="navigation__logo-link" href="#">
+            <img
+              class="image navigation__logo-image"
+              src="src/images/logo-image.png"
+              alt="main-logo"
+            />
+          </a>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="link navigation__link navigation__link--bordered"
+                >Home</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="link navigation__link">Documentation</a>
+            </li>
+          </ul>
+          <button class="navigation__hamburger-button" type="button">
+            <span
+              class="navigation__hamburger-line navigation__hamburger-line--top"
+            ></span>
+            <span
+              class="navigation__hamburger-line navigation__hamburger-line--middle"
+            ></span>
+            <span
+              class="navigation__hamburger-line navigation__hamburger-line--bottom"
+            ></span>
+          </button>
+        </div>
       </nav>
     </header>
-    <aside class="sidebar"></aside>
     <main>
-      <section></section>
+      <section class="hero">
+        <img
+          class="image hero__icon-septagon"
+          src="src/images/septagon-icon.svg"
+          alt="septagon-icon"
+        />
+        <img
+          class="image hero__icon-hexagon"
+          src="src/images/hexagon-icon.svg"
+          alt="hexagon-icon"
+        />
+        <div class="hero__content">
+          <div class="hero__text">
+            <div class="hero__text-content">
+              <h1 class="title hero__text-title">
+                Lorem ipsum dolor sit amet
+                <span class="hero__text-title hero__text-title--highlighted"
+                  >consectetur.</span
+                >
+              </h1>
+            </div>
+            <div class="hero__text-body">
+              <p class="paragraph hero__text-paragraph">
+                Lorem ipsum dolor sit amet consectetur. Vestibulum enim aenean
+                purus nam quis.
+              </p>
+              <a href="#" class="cta hero__text-cta">JOIN</a>
+              <img
+                class="image hero__text-icon-septagon"
+                src="src/images/septagon-icon.svg"
+                alt="septagon-icon"
+              />
+            </div>
+          </div>
+          <aside class="sidebar">
+            <ul class="sidebar__list">
+              <li class="sidebar__list-item">
+                <a class="sidebar__social-icon" href="#">
+                  <img
+                    class="image sidebar__social-image"
+                    src="src/images/github-icon.svg"
+                    alt="github-social-icon"
+                  />
+                </a>
+              </li>
+              <li class="sidebar__list-item">
+                <a class="sidebar__social-icon" href="#">
+                  <img
+                    class="image sidebar__social-image"
+                    src="src/images/discord-icon.svg"
+                    alt="discord-social-icon"
+                  />
+                </a>
+              </li>
+              <li class="sidebar__list-item">
+                <a class="sidebar__social-icon" href="#">
+                  <img
+                    class="image sidebar__social-image"
+                    src="src/images/stackoverflow-icon.svg"
+                    alt="stackoverflow-social-icon"
+                  />
+                </a>
+              </li>
+              <li class="sidebar__list-item">
+                <a class="sidebar__social-icon" href="#">
+                  <img
+                    class="image sidebar__social-image"
+                    src="src/images/reddit-icon.svg"
+                    alt="reddit-social-icon"
+                  />
+                </a>
+              </li>
+              <li class="sidebar__list-item">
+                <a class="sidebar__social-icon" href="#"
+                  ><img
+                    class="image sidebar__social-image"
+                    src="src/images/quora-icon.svg"
+                    alt="quora-social-icon"
+                /></a>
+              </li>
+              <li class="sidebar__list-item">
+                <a class="sidebar__social-icon" href="#"
+                  ><img
+                    class="image sidebar__social-image"
+                    src="src/images/youtube-icon.svg"
+                    alt="youtube-social-icon"
+                /></a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
   </body>

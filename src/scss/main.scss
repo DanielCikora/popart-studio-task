@@ -1,9 +1,12 @@
 // Main stuff
 @use "partials/normalize";
 @use "partials/variables";
-@use "partials/media-queries";
+@use "partials/mixins";
+@use "partials/mediaQueries";
 @use "partials/layout";
 @use "partials/globals";
-
+@use "partials/animations";
 // Sections
 @use "partials/header";
+@use "partials/sidebar";
+@use "partials/hero";

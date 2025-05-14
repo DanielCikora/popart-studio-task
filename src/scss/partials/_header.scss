@@ -1,0 +1,121 @@
+@use "variables";
+@use "mediaQueries";
+@use "mixins";
+.navigation {
+  position: fixed; // Da, mogao sam I sticky, ali ne zelim da "skace"
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: variables.$purple;
+  padding: 16px 0;
+  backdrop-filter: none;
+  @include mixins.transitionStandardTime;
+}
+.navigation--scrolled {
+  background-color: rgba(variables.$purple, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  @include mixins.transitionStandardTime;
+}
+.navigation__content {
+  display: flex;
+  max-width: 1621px;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.navigation__logo-link {
+  display: block;
+}
+.navigation__list {
+  list-style: none;
+  display: flex;
+  gap: 0 37px;
+}
+.navigation__link--bordered {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    border-radius: 2px;
+    height: 20px;
+    right: -21px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: variables.$white;
+    opacity: 0.3;
+  }
+}
+// Active Class for Hamburger
+.navigation__hamburger-button {
+  cursor: pointer;
+  padding: 0;
+  display: none;
+  background: none;
+  border: none;
+}
+.navigation__hamburger-line {
+  display: block;
+  width: 40px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: variables.$white;
+  @include mixins.transitionStandardTime;
+}
+/////////////////////////////////
+@include mediaQueries.Tablet {
+  .navigation {
+    border-bottom: 1px solid variables.$white;
+  }
+  .navigation__logo-image {
+    max-width: 150px;
+  }
+  .navigation__hamburger-button {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    @include mixins.transitionStandardTime;
+  }
+  .navigation__list {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    @include mixins.transitionStandardTime;
+    opacity: 0;
+    position: absolute;
+    top: 61px;
+    background-color: variables.$purple;
+    width: auto;
+    left: 0;
+    right: 0;
+    gap: 14px 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .navigation__link--bordered::before {
+    display: none;
+  }
+}
+.navigation__content--active {
+  .navigation__list {
+    max-height: 1000px;
+    min-height: 100dvh;
+    opacity: 1;
+    padding-top: 40px;
+  }
+  .navigation__hamburger-line--top {
+    transform: rotate(45deg) translateY(8px) translateX(9px);
+  }
+  .navigation__hamburger-line--middle {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  .navigation__hamburger-line--bottom {
+    transform: rotate(-45deg) translateY(-8px) translateX(9px);
+  }
+}

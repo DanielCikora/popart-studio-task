@@ -1,0 +1,38 @@
+@use "mediaQueries";
+.sidebar {
+  min-height: 100dvh;
+  position: relative;
+}
+.sidebar__list {
+  position: fixed;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+  top: 30%;
+  right: 35px;
+}
+.sidebar__social-image {
+  max-width: 30px;
+}
+@include mediaQueries.Desktop {
+  .sidebar__list {
+    right: 10px;
+  }
+  .sidebar__social-image {
+    min-width: 30px;
+  }
+}
+@include mediaQueries.Tablet {
+  .sidebar__social-image {
+    min-width: 34px;
+  }
+  .sidebar {
+    right: 10px;
+  }
+  .sidebar__list {
+    top: auto;
+    bottom: 5%;
+    right: inherit;
+  }
+}

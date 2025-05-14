@@ -1,0 +1,6 @@
+@use "variables";
+body {
+  font-family: "Futura PT", sans-serif;
+  color: variables.$white;
+  background-color: variables.$purple;
+}

@@ -1,0 +1,9 @@
+// Main stuff
+@use "partials/normalize";
+@use "partials/variables";
+@use "partials/media-queries";
+@use "partials/layout";
+@use "partials/globals";
+
+// Sections
+@use "partials/header";

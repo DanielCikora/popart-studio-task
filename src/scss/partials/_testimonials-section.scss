@@ -1,0 +1,92 @@
+@use "mediaQueries";
+.testimonials {
+  padding: 102px 0 154px;
+  position: relative;
+}
+.testimonials__arrow-icon {
+  margin: 0 auto 60px;
+}
+.testimonials__media {
+  position: relative;
+}
+.testimonials__content {
+  display: flex;
+  column-gap: 41px;
+}
+.testimonials__text {
+  padding-top: 40px;
+  max-width: 828px;
+}
+.testimonials__quote {
+  display: flex;
+  column-gap: 16px;
+}
+.testimonials__text-title {
+  text-transform: none;
+  margin-bottom: 7px;
+  font-size: 54px;
+}
+.testimonials__text-subtitle {
+  text-transform: none;
+  margin-bottom: 46px;
+  font-size: 30px;
+}
+.testimonials__quote-icon {
+  margin-top: 6px;
+  max-height: 38px;
+  width: fit-content;
+}
+.testimonials__media-icon {
+  position: absolute;
+  width: fit-content;
+  max-height: 158px;
+  bottom: -7px;
+  right: -80px;
+}
+.testimonials__hexagon-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 130px;
+  width: fit-content;
+  max-height: 60px;
+}
+// Media Queries
+@include mediaQueries.Desktop {
+  .testimonials__text {
+    max-width: 500px;
+  }
+}
+@include mediaQueries.Laptop {
+  .testimonials__text-title {
+    font-size: 46px;
+  }
+  .testimonials__content {
+    flex-direction: column;
+  }
+  .testimonials__quote {
+    flex-direction: column;
+    row-gap: 4px;
+  }
+  .testimonials__media-icon {
+    bottom: -20px;
+    right: 0;
+  }
+  .testimonials__media-user {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .testimonials__text {
+    max-width: 100%;
+  }
+}
+@include mediaQueries.Tablet {
+  .testimonials__text-title {
+    font-size: 30px;
+  }
+  .testimonials__text-subtitle {
+    font-size: 24px;
+  }
+  .testimonials__media-icon {
+    max-width: 100px;
+  }
+}

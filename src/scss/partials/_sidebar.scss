@@ -1,5 +1,6 @@
 @use "mediaQueries";
 @use "mixins";
+@use "variables";
 .sidebar {
   position: fixed;
   top: 30%;
@@ -12,6 +13,7 @@
   flex-direction: column;
   gap: 25px 0;
   height: 100%;
+  padding: 0;
 }
 .sidebar__social-image {
   @include mixins.transitionStandardTime;
@@ -22,10 +24,10 @@
     transform: scale(1.4);
   }
 }
-
 @include mediaQueries.Desktop {
   .sidebar {
-    right: 10px;
+    right: 0px;
+    padding: 10px;
   }
   .sidebar__social-image {
     min-width: 30px;
@@ -35,8 +37,13 @@
   .sidebar__social-image {
     min-width: 34px;
   }
+  .sidebar__list {
+    gap: 20px 0;
+  }
   .sidebar {
-    right: 10px;
+    border-radius: 10px 0 0 0;
+    background-color: rgba(variables.$purple, 0.8);
+    backdrop-filter: blur(1px);
     top: auto;
     bottom: 0;
   }

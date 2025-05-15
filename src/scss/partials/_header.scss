@@ -1,21 +1,23 @@
 @use "variables";
 @use "mediaQueries";
 @use "mixins";
-.navigation {
-  position: fixed; // Da, mogao sam I sticky, ali ne zelim da "skace"
+.header {
+  position: sticky;
   z-index: 9999;
   top: 0;
-  left: 0;
   width: 100%;
   background: variables.$purple;
   padding: 16px 0;
   backdrop-filter: none;
   @include mixins.transitionStandardTime;
 }
-.navigation--scrolled {
+main {
+  height: 2000px;
+}
+.header--scrolled {
+  border-bottom: 1px solid variables.$white;
   background-color: rgba(variables.$purple, 0.8);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   @include mixins.transitionStandardTime;
 }
 .navigation__content {
@@ -66,10 +68,29 @@
   background-color: variables.$white;
   @include mixins.transitionStandardTime;
 }
-/////////////////////////////////
+.no-scroll {
+  overflow: hidden;
+  min-height: 100dvh;
+}
+// Media Queries
 @include mediaQueries.Tablet {
-  .navigation {
-    border-bottom: 1px solid variables.$white;
+  .navigation__content--active {
+    .navigation__list {
+      max-height: 100%;
+      min-height: 100dvh;
+      opacity: 1;
+      padding-top: 40px;
+    }
+    .navigation__hamburger-line--top {
+      transform: rotate(45deg) translateY(8px) translateX(9px);
+    }
+    .navigation__hamburger-line--middle {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    .navigation__hamburger-line--bottom {
+      transform: rotate(-45deg) translateY(-8px) translateX(9px);
+    }
   }
   .navigation__logo-image {
     max-width: 150px;
@@ -81,41 +102,25 @@
     @include mixins.transitionStandardTime;
   }
   .navigation__list {
-    margin: 0;
+    display: block;
     max-height: 0;
     overflow: hidden;
     @include mixins.transitionStandardTime;
     opacity: 0;
     position: absolute;
     top: 61px;
-    background-color: variables.$purple;
-    width: auto;
+    background-color: rgba(variables.$purple, 0.8);
+    backdrop-filter: blur(100px);
     left: 0;
     right: 0;
-    gap: 14px 0;
-    flex-direction: column;
-    align-items: center;
     padding: 0;
+    margin: 0;
+  }
+  .navigation__item {
+    width: fit-content;
+    margin: 20px auto;
   }
   .navigation__link--bordered::before {
     display: none;
-  }
-}
-.navigation__content--active {
-  .navigation__list {
-    max-height: 1000px;
-    min-height: 100dvh;
-    opacity: 1;
-    padding-top: 40px;
-  }
-  .navigation__hamburger-line--top {
-    transform: rotate(45deg) translateY(8px) translateX(9px);
-  }
-  .navigation__hamburger-line--middle {
-    transform: translateX(200px);
-    opacity: 0;
-  }
-  .navigation__hamburger-line--bottom {
-    transform: rotate(-45deg) translateY(-8px) translateX(9px);
   }
 }

@@ -1,0 +1,70 @@
+@use "mediaQueries";
+.contributors {
+  padding: 228px 0 0;
+}
+.contributors__title {
+  margin-bottom: 57px;
+}
+.contributors__boxes {
+  display: grid;
+  column-gap: 97px;
+  row-gap: 65px;
+  margin-bottom: 58px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.contributor__box-image {
+  width: fit-content;
+  margin-bottom: 28px;
+  max-height: 250px;
+}
+.contributor__caption-title {
+  text-transform: none;
+  font-size: 30px;
+}
+.contributor__caption-role {
+  font-size: 28px;
+}
+.contributors__subtitle {
+  font-size: 54px;
+  line-height: 77px;
+  text-transform: none;
+  max-width: 687px;
+}
+.contributor__caption-cta {
+  padding: 20px 20px 12px;
+  margin-top: 10px;
+}
+@include mediaQueries.Laptop {
+  .contributors__boxes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+  }
+  .contributor__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contributors__subtitle {
+    font-size: 46px;
+  }
+}
+@include mediaQueries.Tablet {
+  .contributors__boxes {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .contributors__subtitle {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@include mediaQueries.MobileL {
+  .contributors__subtitle {
+    font-size: 34px;
+  }
+}
+@include mediaQueries.Mobile {
+  .contributors__subtitle {
+    font-size: 28px;
+  }
+}

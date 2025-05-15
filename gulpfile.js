@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
+const cleanCSS = require("gulp-clean-css");
 const browserSync = require("browser-sync").create();
 const uglify = require("gulp-uglify");
 
@@ -24,6 +25,7 @@ function compileSass() {
     .src(paths.scss)
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dist + "css"))
     .pipe(browserSync.stream());

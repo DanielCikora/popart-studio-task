@@ -9,7 +9,8 @@
 }
 .whyus__boxes {
   display: grid;
-  gap: 103px;
+  column-gap: 103px;
+  row-gap: 117px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .whyus__box {
@@ -25,7 +26,10 @@
   font-size: 44px;
   margin-bottom: 30px;
   line-height: 50px;
-  text-transform: capitalize;
+  text-transform: none;
+}
+.whyus__box-title--shortened {
+  padding-right: 182px;
 }
 // Icons
 .whyus__icon {
@@ -40,16 +44,24 @@
 }
 .whyus__icon--hexagons-dual {
   left: 32%;
-  top: 46%;
+  top: 43%;
 }
 .whyus__icon--dots-teal-large {
   right: 0;
-  top: 33%;
+  top: 31%;
 }
 .whyus__icon--octagone {
   left: 123px;
-  bottom: 0;
+  bottom: 62px;
   animation: floatAround 20s ease-in-out infinite;
+}
+@include mediaQueries.Laptop {
+  .whyus__box-title--shortened {
+    padding-right: 0;
+  }
+  .whyus__boxes {
+    gap: 20px;
+  }
 }
 @include mediaQueries.Tablet {
   .whyus__icon {

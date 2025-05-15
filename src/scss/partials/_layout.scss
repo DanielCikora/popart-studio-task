@@ -1,4 +1,11 @@
 @use "variables";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
 body {
   font-family: "Futura PT", sans-serif;
   color: variables.$white;

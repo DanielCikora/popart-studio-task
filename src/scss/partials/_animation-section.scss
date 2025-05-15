@@ -1,11 +1,45 @@
 @use "variables";
 @use "mediaQueries";
-.wrapper--animation {
-  padding: 143px 0;
+.animation {
+  position: relative;
+}
+.animation__image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.animation__icon-dots {
+  max-height: 190px;
+  width: fit-content;
+}
+.animation__icon-dots--pink {
+  margin-right: auto;
+}
+.animation__icon-dots--teal {
+  margin-left: auto;
+}
+.animation__icon-arrows {
+  max-height: 30px;
+  position: absolute;
+  top: 23px;
+  left: 47.5%;
+  transform: translateX(-50%);
 }
 // Media Queries
 @include mediaQueries.Tablet {
   .wrapper--animation {
     padding-top: 0;
+  }
+  .animation__icon-arrows {
+    max-height: 20px;
+    left: auto;
+    transform: none;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+  }
+  .animation__icon-dots {
+    max-height: 100px;
+    padding: 20px 0;
   }
 }

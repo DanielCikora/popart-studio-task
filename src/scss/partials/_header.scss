@@ -7,7 +7,7 @@
   top: 0;
   width: 100%;
   background: variables.$purple;
-  padding: 16px 0;
+  padding: 26px 0;
   backdrop-filter: none;
   @include mixins.transitionStandardTime;
 }
@@ -18,7 +18,7 @@
 }
 .navigation__content {
   display: flex;
-  max-width: 1621px;
+  max-width: 1660px;
   margin-inline: auto;
   justify-content: space-between;
   align-items: center;

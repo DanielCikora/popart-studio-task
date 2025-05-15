@@ -1,6 +1,23 @@
 @use "mediaQueries";
 .contributors {
-  padding: 228px 0 0;
+  padding: 228px 0 300px;
+  position: relative;
+}
+.contributor {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 1s ease, transform 1s ease;
+  &--visible {
+    opacity: 1;
+  }
+  &.slide-in-left {
+    transform: translateX(-50px);
+    animation: slideFromLeft 2s ease forwards;
+  }
+  &.slide-in-right {
+    transform: translateX(50px);
+    animation: slideFromRight 2s ease forwards;
+  }
 }
 .contributors__title {
   margin-bottom: 57px;
@@ -9,7 +26,7 @@
   display: grid;
   column-gap: 97px;
   row-gap: 65px;
-  margin-bottom: 58px;
+  margin-bottom: 74px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .contributor__box-image {
@@ -33,6 +50,21 @@
 .contributor__caption-cta {
   padding: 20px 20px 12px;
   margin-top: 10px;
+}
+.contributors__icon {
+  position: absolute;
+}
+.contributors__icon--dots {
+  left: 0;
+  bottom: 94px;
+}
+.contributors__icon--arrows {
+  right: 26.4%;
+  bottom: 15px;
+}
+.contributors__icon--hexagon {
+  right: 92px;
+  bottom: 127px;
 }
 @include mediaQueries.Laptop {
   .contributors__boxes {

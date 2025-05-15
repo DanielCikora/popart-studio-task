@@ -2,6 +2,7 @@ const header = document.querySelector(".header");
 const hamburgerButton = document.querySelector(".navigation__hamburger-button");
 const hamburgerMenu = document.querySelector(".navigation__content");
 const whyUsBoxes = document.querySelectorAll(".whyus__box");
+const allContributors = document.querySelectorAll(".contributor");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
@@ -40,4 +41,23 @@ const intersectionObserver = new IntersectionObserver(
 whyUsBoxes.forEach((box, i) => {
   box.dataset.index = i;
   intersectionObserver.observe(box);
+});
+
+const contributorObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const box = entry.target;
+      if (entry.isIntersecting) {
+        const index = parseInt(box.dataset.index);
+        const directionClass = index < 3 ? "slide-in-left" : "slide-in-right";
+        box.classList.add("contributor--visible", directionClass);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+allContributors.forEach((box, i) => {
+  box.dataset.index = i;
+  contributorObserver.observe(box);
 });

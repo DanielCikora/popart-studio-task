@@ -1,8 +1,8 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
-const cleanCSS = require("gulp-clean-css");
 const browserSync = require("browser-sync").create();
+const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 
 const paths = {
@@ -39,11 +39,9 @@ function serve() {
     port: 3000,
     open: true,
   });
-
   gulp.watch(paths.scss, compileSass);
   gulp.watch(paths.js, minifyJS).on("change", browserSync.reload);
   gulp.watch(paths.js).on("change", browserSync.reload);
   gulp.watch(paths.html).on("change", browserSync.reload);
 }
-
 exports.default = gulp.series(gulp.parallel(compileSass, minifyJS), serve);

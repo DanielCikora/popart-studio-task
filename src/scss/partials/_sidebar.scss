@@ -1,22 +1,22 @@
 @use "mediaQueries";
 .sidebar {
-  min-height: 100dvh;
-  position: relative;
+  position: fixed;
+  top: 28%;
+  right: 35px;
+  z-index: 999;
 }
 .sidebar__list {
-  position: fixed;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 25px 0;
-  top: 30%;
-  right: 35px;
+  height: 100%;
 }
 .sidebar__social-image {
   max-width: 30px;
 }
 @include mediaQueries.Desktop {
-  .sidebar__list {
+  .sidebar {
     right: 10px;
   }
   .sidebar__social-image {
@@ -29,10 +29,7 @@
   }
   .sidebar {
     right: 10px;
-  }
-  .sidebar__list {
     top: auto;
-    bottom: 5%;
-    right: inherit;
+    bottom: 0;
   }
 }

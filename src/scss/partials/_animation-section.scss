@@ -1,0 +1,11 @@
+@use "variables";
+@use "mediaQueries";
+.wrapper--animation {
+  padding: 143px 0;
+}
+// Media Queries
+@include mediaQueries.Tablet {
+  .wrapper--animation {
+    padding-top: 0;
+  }
+}

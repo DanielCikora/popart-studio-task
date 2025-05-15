@@ -6,6 +6,7 @@
 .hero__content {
   display: flex;
   position: relative;
+  padding: 0 20px;
 }
 .hero__text {
   padding: 186px 0 134px;
@@ -20,7 +21,6 @@
 }
 .hero__text-title {
   font-size: 113px;
-  text-transform: uppercase;
   letter-spacing: 0;
   margin: 0 0 20px 0;
   &--highlighted {
@@ -35,6 +35,7 @@
   flex-direction: column;
   gap: 27px 0;
   justify-self: end;
+  padding-right: 20px;
 }
 .hero__text-paragraph {
   margin: 0;
@@ -52,7 +53,7 @@
   animation: floatAround 10s ease-in-out infinite;
   will-change: transform;
 }
-.hero__icon-hexagon {
+.hero__icon-hexagone {
   max-width: 114px;
   position: absolute;
   left: 35%;
@@ -105,7 +106,7 @@
     top: 0;
     left: 0;
   }
-  .hero__icon-hexagon {
+  .hero__icon-hexagone {
     bottom: 10%;
     left: 10%;
   }

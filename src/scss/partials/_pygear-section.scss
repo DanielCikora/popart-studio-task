@@ -1,0 +1,73 @@
+@use "mediaQueries";
+.pygear {
+  padding: 54px 0;
+  position: relative;
+}
+.pygear__text {
+  width: 100%;
+  position: relative;
+}
+.pygear__text-title {
+  margin-bottom: 31px;
+}
+.pygear__text-paragraph {
+  max-width: 880px;
+}
+.pygear__text {
+  width: 100%;
+}
+.pygear__content-text {
+  display: flex;
+  margin-bottom: 128px;
+}
+.pygear__icon-arrow {
+  position: absolute;
+  top: 19%;
+  right: 26%;
+}
+.pygear__icon-nonagone {
+  position: absolute;
+  right: 100px;
+  top: 16%;
+}
+.pygear__icon-dots {
+  position: absolute;
+  left: 0;
+  bottom: 21%;
+}
+// Media Queries
+@include mediaQueries.Desktop {
+  .pygear__icon-arrow {
+    top: 45%;
+  }
+  .pygear__icon-nonagone {
+    top: 50%;
+  }
+}
+@include mediaQueries.Laptop {
+  .pygear__icon-nonagone {
+    top: 60%;
+  }
+  .pygear__icon-arrow {
+    top: 50%;
+  }
+}
+@include mediaQueries.Tablet {
+  .pygear__icon-nonagone {
+    opacity: 0.4;
+  }
+  .pygear__icon-arrow {
+    opacity: 0.4;
+  }
+}
+@include mediaQueries.MobileL {
+  .pygear__icon-dots {
+    opacity: 0.2;
+  }
+  .pygear__icon-nonagone {
+    opacity: 0.2;
+  }
+  .pygear__icon-arrow {
+    opacity: 0.2;
+  }
+}

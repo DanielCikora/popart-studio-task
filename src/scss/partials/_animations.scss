@@ -18,24 +18,12 @@
     transform: translate(0, 0);
   }
 }
-@keyframes spinFloatAround {
-  0% {
-    transform: rotate(0deg) translate(0, 0);
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
   }
-  20% {
-    transform: rotate(60deg) translate(2px, 8px);
-  }
-  40% {
-    transform: rotate(120deg) translate(5px, 10px);
-  }
-  60% {
-    transform: rotate(180deg) translate(10px, 12px);
-  }
-  80% {
-    transform: rotate(240deg) translate(6px, 8px);
-  }
-  100% {
-    transform: rotate(360deg) translate(0, 0);
+  to {
+    transform: rotate(360deg);
   }
 }
 @keyframes pulsate {
@@ -50,5 +38,15 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

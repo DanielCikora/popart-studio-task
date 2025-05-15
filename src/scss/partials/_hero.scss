@@ -59,7 +59,7 @@
   left: 35%;
   bottom: 15%;
   z-index: -2;
-  animation: spinFloatAround 20s ease-in-out infinite;
+  animation: spinAround 20s ease-in-out infinite;
   will-change: transform;
 }
 .hero__text-icon-septagon {
@@ -91,7 +91,7 @@
     min-height: 100dvh;
   }
   .hero__text {
-    padding: 40px 50px 0 50px;
+    padding: 40px 0 0 0;
   }
   .hero__text-body {
     max-width: 100%;
@@ -100,7 +100,6 @@
   }
   .hero__text-title {
     font-size: 40px;
-    text-align: center;
   }
   .hero__icon-septagon {
     top: 0;

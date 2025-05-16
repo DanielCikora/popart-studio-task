@@ -21,6 +21,7 @@
 }
 .contributors__title {
   margin-bottom: 57px;
+  letter-spacing: -3px;
 }
 .contributors__boxes {
   display: grid;
@@ -46,6 +47,7 @@
   line-height: 77px;
   text-transform: none;
   max-width: 687px;
+  letter-spacing: 0;
 }
 .contributor__caption-cta {
   padding: 20px 20px 12px;
@@ -82,6 +84,9 @@
   }
 }
 @include mediaQueries.Tablet {
+  .contributors {
+    padding: 50px 0 180px;
+  }
   .contributors__boxes {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }

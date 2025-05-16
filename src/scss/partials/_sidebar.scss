@@ -3,9 +3,9 @@
 @use "variables";
 .sidebar {
   position: fixed;
-  top: 30%;
+  top: 40%;
   right: 0;
-  padding: 5px 35px 5px 5px;
+  padding: 5px 36px 5px 5px;
   z-index: 999;
   background-color: rgba(variables.$purple, 0.8);
   backdrop-filter: blur(1px);

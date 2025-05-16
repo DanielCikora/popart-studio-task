@@ -56,6 +56,12 @@
   bottom: 62px;
   animation: floatAround 20s ease-in-out infinite;
 }
+@include mediaQueries.CustomMediumLarge {
+  .whyus__icon--dots-teal-large,
+  .whyus__icon--hexagons-dual {
+    opacity: 0.4;
+  }
+}
 @include mediaQueries.Laptop {
   .whyus__box-title--shortened {
     padding-right: 0;

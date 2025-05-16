@@ -96,3 +96,12 @@ playBtn.addEventListener("click", () => {
     playBtn.style.opacity = 1;
   }
 });
+
+document.addEventListener("scroll", () => {
+  const scrolled = window.scrollY;
+  document.querySelectorAll(".parallax").forEach((el) => {
+    const speed = parseFloat(el.dataset.speed) || 1;
+    const offset = scrolled * (speed / 10);
+    el.style.transform = `translateY(${offset}px)`;
+  });
+});

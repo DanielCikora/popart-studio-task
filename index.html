@@ -7,7 +7,11 @@
       name="description"
       content="PopArt Studio task created by Daniel Cikora using Vanilla JS, GULP, SASS, HTML"
     />
-    <link rel="icon" type="image/x-icon" href="/septagon-icon.svg" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/assets/icons/septagon-icon-lines.svg"
+    />
     <title>PopArt Studio Task</title>
     <link
       href="https://fonts.cdnfonts.com/css/aspergit?styles=37793,37790,37791,37792,37788,37789"
@@ -17,8 +21,8 @@
       href="https://fonts.cdnfonts.com/css/futura-pt?styles=117663,117667,117668,117664,117666,117662,117665"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/dist/css/main.css" />
-    <script src="/dist/js/main.js" defer></script>
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <script src="dist/js/main.js" defer></script>
     <meta name="author" content="Daniel Cikora" />
     <meta
       name="keywords"
@@ -120,7 +124,7 @@
       </ul>
     </aside>
     <main>
-      <section class="hero">
+      <section class="hero parallax" data-speed="2">
         <img
           class="image hero__icon-septagon"
           src="src/assets/icons/septagon-icon.svg"
@@ -491,7 +495,7 @@
               >START TODAY </span
             >- Join the network
           </h2>
-          <div class="joinus__icons">
+          <nav class="joinus__icons" aria-label="social-media">
             <a class="joinus__icon joinus__icon--discord" href="#">
               <img
                 class="image joinus__icon-image joinus__icon-image--discord"
@@ -534,7 +538,7 @@
                 alt="youtube-icon-octagon"
               />
             </a>
-          </div>
+          </nav>
         </div>
       </section>
       <section class="video">
@@ -609,7 +613,7 @@
                 semper proin quisque arcu, cras eget turpis tortor tristique
                 egestas quisqu...
               </p>
-              <a class="link news__card-link">read more</a>
+              <a class="link news__card-link" href="#">read more</a>
             </article>
             <article class="news__card">
               <img
@@ -628,18 +632,18 @@
                 semper proin quisque arcu, cras eget turpis tortor tristique
                 egestas quisqu...
               </p>
-              <a class="link news__card-link">read more</a>
+              <a class="link news__card-link" href="#">read more</a>
             </article>
           </div>
           <a class="cta news__cta" href="#">view all news</a>
         </div>
         <img
-          class="image octagone news__icon news__icon-octagone"
+          class="image octagone news__icon news__icon--octagone"
           src="src/assets/icons/octagone-icon.svg"
           alt="octagone-icon"
         />
         <img
-          class="image colored-arrow news__icon news__icon-arrow-bot"
+          class="image colored-arrow news__icon news__icon--arrow-bot"
           src="src/assets/icons/colored-arrows-icon.svg"
           alt="colored-arrows-icon"
         />

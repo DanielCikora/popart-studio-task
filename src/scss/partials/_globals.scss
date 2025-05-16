@@ -69,7 +69,6 @@
     max-height: 50px;
   }
 }
-
 .dots {
   width: fit-content;
   max-height: 200px;
@@ -125,4 +124,8 @@
     box-shadow: inset 300px 0 0 0 variables.$pink;
     color: variables.$white;
   }
+}
+.parallax {
+  will-change: transform;
+  transition: transform 0.2s ease-out;
 }

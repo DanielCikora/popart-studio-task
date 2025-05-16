@@ -64,10 +64,28 @@
 .news__cta {
   padding: 18px 24px 12px;
 }
+.news__icon-octagone {
+  width: fit-content;
+  max-height: 100px;
+  z-index: -1;
+  bottom: 9px;
+  left: 121px;
+}
+.news__icon-arrow-bot {
+  right: 20.2%;
+  bottom: 2%;
+}
 // Media Queries
 @include mediaQueries.CustomMediumLarge {
   .news__icon--dots {
     top: 0;
+  }
+  .news__icon-octagone {
+    opacity: 0.4;
+    bottom: 0;
+    left: auto;
+    right: 80px;
+    animation: spinAround 8s ease-in-out infinite;
   }
 }
 @include mediaQueries.Laptop {
@@ -76,6 +94,9 @@
   }
   .news__icon--arrow {
     display: none;
+  }
+  .news__icon-octagone {
+    max-height: 80px;
   }
 }
 @include mediaQueries.Tablet {
@@ -90,6 +111,9 @@
     font-size: 30px;
     text-align: left;
     line-height: 30px;
+  }
+  .news__icon-arrow-bot {
+    left: 10%;
   }
 }
 @include mediaQueries.MobileL {

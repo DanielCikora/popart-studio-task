@@ -1,0 +1,142 @@
+@use "mediaQueries";
+@use "mixins";
+@use "variables";
+.footer {
+  padding: 53px 0 0px;
+  position: relative;
+}
+.footer__links-content {
+  display: flex;
+}
+.footer__content-top {
+  display: flex;
+  width: 100%;
+  padding-bottom: 122px;
+}
+.footer__content-bot {
+  padding-bottom: 16px;
+}
+.footer__logo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin-right: 115px;
+}
+.footer__logo-image {
+  width: 100%;
+}
+.footer__links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-right: 120px;
+}
+.footer__link {
+  width: fit-content;
+  &:hover {
+    box-shadow: inset 150px 0 0 0 variables.$neonGreen;
+  }
+}
+.footer__socials-list {
+  list-style: none;
+  display: grid;
+  align-items: center;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 20px;
+}
+.footer__icon {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 14%;
+  max-width: 350px;
+  max-height: 350px;
+  width: 100%;
+  height: auto;
+}
+.footer__social-link-image {
+  @include mixins.transitionStandardTime;
+  max-height: 18px;
+  max-width: 18px;
+}
+.footer__social-link {
+  &:hover {
+    .footer__social-link-image {
+      transform: scale(1.5);
+    }
+  }
+}
+.footer__bot-paragraph {
+  text-align: center;
+  font-size: 28px;
+}
+@include mediaQueries.CustomMediumLarge {
+  .footer__icon {
+    max-height: 100px;
+    max-width: 100px;
+    right: 8%;
+  }
+}
+@include mediaQueries.Laptop {
+  .footer__logo {
+    margin: 0 0 20px 0;
+  }
+  .footer__links-content {
+    justify-content: center;
+    gap: 100px;
+  }
+  .footer__content-top {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+  .footer__links-list {
+    margin: 0 0 20px 0;
+    padding: 0;
+    row-gap: 4px;
+  }
+  .footer__link {
+    font-size: 24px;
+  }
+  .footer__socials-list {
+    row-gap: 20px;
+    column-gap: 40px;
+  }
+  .footer__social-link-image {
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .footer__bot-paragraph {
+    font-size: 22px;
+  }
+  .footer__content-bot {
+    padding-bottom: 0;
+  }
+}
+@include mediaQueries.Tablet {
+  .footer__links-content {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer__socials-list {
+    column-gap: 60px;
+    row-gap: 10px;
+    width: fit-content;
+  }
+  .footer__bot-paragraph {
+    font-size: 18px;
+  }
+  .footer__icon {
+    opacity: 0.4;
+  }
+}
+@include mediaQueries.MobileL {
+  .footer__logo {
+    max-width: 150px;
+  }
+  .footer__socials-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+}

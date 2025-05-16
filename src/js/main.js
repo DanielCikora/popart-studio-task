@@ -3,6 +3,7 @@ const hamburgerButton = document.querySelector(".navigation__hamburger-button");
 const hamburgerMenu = document.querySelector(".navigation__content");
 const whyUsBoxes = document.querySelectorAll(".whyus__box");
 const allContributors = document.querySelectorAll(".contributor");
+const icons = document.querySelectorAll(".icon-wrapper");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
@@ -19,7 +20,7 @@ if (hamburgerButton && hamburgerMenu) {
   });
 }
 
-const intersectionObserver = new IntersectionObserver(
+const whyUsObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       const box = entry.target;
@@ -40,7 +41,7 @@ const intersectionObserver = new IntersectionObserver(
 
 whyUsBoxes.forEach((box, i) => {
   box.dataset.index = i;
-  intersectionObserver.observe(box);
+  whyUsObserver.observe(box);
 });
 
 const contributorObserver = new IntersectionObserver(
@@ -60,4 +61,17 @@ const contributorObserver = new IntersectionObserver(
 allContributors.forEach((box, i) => {
   box.dataset.index = i;
   contributorObserver.observe(box);
+});
+
+icons.forEach((icon) => {
+  const range = 10;
+  let x = 0;
+  let y = 0;
+  function float() {
+    x = Math.random() * range - range / 2;
+    y = Math.random() * range - range / 2;
+    icon.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+    setTimeout(float, 2000 + Math.random() * 1000);
+  }
+  float();
 });

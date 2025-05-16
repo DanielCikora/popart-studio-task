@@ -9,7 +9,7 @@ const paths = {
   scss: "./src/scss/**/*.scss",
   js: "./src/js/**/*.js",
   html: "./*.html",
-  images: "./src/images/**/*",
+  images: "./src/assets/**/**/*",
   dist: "./dist/",
 };
 

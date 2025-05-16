@@ -4,6 +4,8 @@ const hamburgerMenu = document.querySelector(".navigation__content");
 const whyUsBoxes = document.querySelectorAll(".whyus__box");
 const allContributors = document.querySelectorAll(".contributor");
 const icons = document.querySelectorAll(".joinus__icon");
+const video = document.querySelector(".video-player__video");
+const playBtn = document.querySelector(".video-player__play-btn");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
@@ -83,4 +85,14 @@ const iconObserver = new IntersectionObserver(
 
 icons.forEach((icon) => {
   iconObserver.observe(icon);
+});
+
+playBtn.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+    playBtn.style.opacity = 0;
+  } else {
+    video.pause();
+    playBtn.style.opacity = 1;
+  }
 });

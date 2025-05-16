@@ -53,6 +53,14 @@
     max-height: 50px;
   }
 }
+.septagon {
+  max-height: 100px;
+  width: fit-content;
+  z-index: -1;
+  @include mediaQueries.Tablet {
+    max-height: 50px;
+  }
+}
 .nonagone {
   max-height: 100px;
   width: fit-content;
@@ -61,6 +69,7 @@
     max-height: 50px;
   }
 }
+
 .dots {
   width: fit-content;
   max-height: 200px;

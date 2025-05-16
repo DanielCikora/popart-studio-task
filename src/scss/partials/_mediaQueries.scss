@@ -28,9 +28,14 @@
     @content;
   }
 }
-// Custom Media Queries
+// Custom (Specific Scenario) Media Queries that I can use
 @mixin CustomLarge {
   @media only screen and (max-width: 1300px) {
+    @content;
+  }
+}
+@mixin CustomExtraLarge {
+  @media only screen and (max-width: 2000px) {
     @content;
   }
 }

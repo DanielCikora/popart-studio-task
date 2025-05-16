@@ -1,0 +1,80 @@
+@use "mediaQueries";
+.video {
+  padding: 135px 0 68px;
+  position: relative;
+}
+.video__title {
+  max-width: 873px;
+  margin-bottom: 59px;
+  letter-spacing: -3px;
+}
+.video-player {
+  max-height: 663px;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.video-player__video {
+  width: 100%;
+  height: auto;
+}
+.video-player__play-btn {
+  background: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.video__icon {
+  display: block;
+  position: absolute;
+}
+.video__icon--nonagone {
+  left: 131px;
+  top: 111px;
+  animation: floatAround 10s ease-in-out infinite;
+}
+.video__icon--septagon {
+  right: 35.8%;
+  top: 14.7%;
+}
+.video__icon--dots {
+  right: 7px;
+  top: 0;
+}
+@include mediaQueries.CustomExtraLarge {
+  .video__icon--nonagone {
+    top: 30%;
+  }
+  .video__icon {
+    opacity: 0.4;
+  }
+  .video__icon--dots {
+    top: 75%;
+  }
+}
+@include mediaQueries.Laptop {
+  .video__icon--nonagone {
+    display: none;
+  }
+  .video__icon--septagon {
+    left: 20px;
+    bottom: 0;
+    top: 0;
+  }
+}
+@include mediaQueries.Tablet {
+  .video-player__play-icon {
+    max-height: 50px;
+    max-width: 50px;
+  }
+  .video__icon--nonagone {
+    left: 0px;
+    top: 200px;
+  }
+  .video__icon--septagon {
+    right: 0;
+    top: 15%;
+  }
+}

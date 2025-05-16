@@ -2,6 +2,7 @@
 @use "mediaQueries";
 .hero {
   position: relative;
+  overflow: hidden;
 }
 .hero__content {
   display: flex;
@@ -101,7 +102,7 @@
     font-size: 40px;
   }
   .hero__icon-septagon {
-    top: 0;
+    top: 12%;
     left: 0;
   }
   .hero__icon-hexagone {

@@ -28,3 +28,9 @@
     @content;
   }
 }
+// Custom Media Queries
+@mixin CustomLarge {
+  @media only screen and (max-width: 1300px) {
+    @content;
+  }
+}

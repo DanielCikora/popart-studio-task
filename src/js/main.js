@@ -3,7 +3,7 @@ const hamburgerButton = document.querySelector(".navigation__hamburger-button");
 const hamburgerMenu = document.querySelector(".navigation__content");
 const whyUsBoxes = document.querySelectorAll(".whyus__box");
 const allContributors = document.querySelectorAll(".contributor");
-const icons = document.querySelectorAll(".icon-wrapper");
+const icons = document.querySelectorAll(".joinus__icon");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
@@ -63,15 +63,24 @@ allContributors.forEach((box, i) => {
   contributorObserver.observe(box);
 });
 
-icons.forEach((icon) => {
-  const range = 10;
-  let x = 0;
-  let y = 0;
-  function float() {
-    x = Math.random() * range - range / 2;
-    y = Math.random() * range - range / 2;
-    icon.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
-    setTimeout(float, 2000 + Math.random() * 1000);
+icons.forEach((icon, i) => {
+  icon.style.setProperty("--delay", `${i * 0.2}s`);
+});
+
+const iconObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("joinus__icon--visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.3,
   }
-  float();
+);
+
+icons.forEach((icon) => {
+  iconObserver.observe(icon);
 });

@@ -1,0 +1,87 @@
+@use "mediaQueries";
+@use "mixins";
+.joinus {
+  padding: 8px 0 10px;
+}
+.joinus__title {
+  max-width: 939px;
+  margin-bottom: 60px;
+}
+// Icons
+.joinus__icons {
+  position: relative;
+  width: 100%;
+  max-width: 1237px;
+  min-height: 615px;
+}
+.joinus__icon {
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  transition-delay: var(--delay);
+  &:hover {
+    .joinus__icon-image {
+      scale: 1.1;
+    }
+  }
+}
+.joinus__icon--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.joinus__icon-image {
+  height: fit-content;
+  width: fit-content;
+  @include mixins.transitionStandardTime;
+}
+.joinus__icon--discord {
+  bottom: 14%;
+}
+.joinus__icon--github {
+  top: 0;
+  left: 25%;
+}
+.joinus__icon--stackoverflow {
+  right: 25.5%;
+  top: 23%;
+}
+.joinus__icon--quora {
+  bottom: 8%;
+  right: 23.5%;
+}
+.joinus__icon--reddit {
+  bottom: 0;
+  right: 8%;
+}
+.joinus__icon--youtube {
+  right: 0;
+  bottom: 28%;
+}
+// Media Queries
+@include mediaQueries.CustomLarge {
+  .joinus__icons {
+    padding-inline: 50px;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .joinus__icon {
+    position: static;
+  }
+}
+@include mediaQueries.Tablet {
+  .joinus__icon-image {
+    max-width: 300px;
+  }
+}
+@include mediaQueries.MobileL {
+  .joinus__icon-image {
+    max-width: 200px;
+  }
+}

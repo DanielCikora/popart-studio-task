@@ -105,3 +105,19 @@ document.addEventListener("scroll", () => {
     el.style.transform = `translateY(${offset}px)`;
   });
 });
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  const content = document.querySelector(".content");
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    loader.addEventListener(
+      "transitionend",
+      () => {
+        loader.style.display = "none";
+        content.classList.remove("hidden");
+      },
+      { once: true }
+    );
+  }, 3000);
+});

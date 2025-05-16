@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="src/assets/icons/septagon-icon-lines.svg"
+      href="assets/icons/septagon-icon-lines.svg"
     />
     <title>PopArt Studio Task</title>
     <link
@@ -21,8 +21,8 @@
       href="https://fonts.cdnfonts.com/css/futura-pt?styles=117663,117667,117668,117664,117666,117662,117665"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="dist/css/main.css" />
-    <script src="dist/js/main.js" defer></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
     <meta name="author" content="Daniel Cikora" />
     <meta
       name="keywords"
@@ -31,13 +31,21 @@
     <meta name="robots" content="index, follow" />
   </head>
   <body>
+    <div
+      class="loader"
+      role="status"
+      aria-live="polite"
+      aria-label="Loading content"
+    >
+      <div class="loader__spinner"></div>
+    </div>
     <header class="header">
       <nav class="navigation">
         <div class="navigation__content">
           <a class="navigation__logo-link" href="#">
             <img
               class="image navigation__logo-image"
-              src="src/assets/images/logo-image.png"
+              src="assets/images/logo-image.png"
               alt="main-logo"
             />
           </a>
@@ -73,7 +81,7 @@
           <a class="sidebar__social-icon" href="#" aria-label="github">
             <img
               class="image sidebar__social-image"
-              src="src/assets/icons/github-icon.svg"
+              src="assets/icons/github-icon.svg"
               alt="github-social-icon"
             />
           </a>
@@ -82,7 +90,7 @@
           <a class="sidebar__social-icon" href="#" aria-label="discord">
             <img
               class="image sidebar__social-image"
-              src="src/assets/icons/discord-icon.svg"
+              src="assets/icons/discord-icon.svg"
               alt="discord-social-icon"
             />
           </a>
@@ -91,7 +99,7 @@
           <a class="sidebar__social-icon" href="#" aria-label="stackoverflow">
             <img
               class="image sidebar__social-image"
-              src="src/assets/icons/stackoverflow-icon.svg"
+              src="assets/icons/stackoverflow-icon.svg"
               alt="stackoverflow-social-icon"
             />
           </a>
@@ -100,7 +108,7 @@
           <a class="sidebar__social-icon" href="#" aria-label="reddit">
             <img
               class="image sidebar__social-image"
-              src="src/assets/icons/reddit-icon.svg"
+              src="assets/icons/reddit-icon.svg"
               alt="reddit-social-icon"
             />
           </a>
@@ -109,7 +117,7 @@
           <a class="sidebar__social-icon" href="#" aria-label="quora"
             ><img
               class="image sidebar__social-image"
-              src="src/assets/icons/quora-icon.svg"
+              src="assets/icons/quora-icon.svg"
               alt="quora-social-icon"
           /></a>
         </li>
@@ -117,7 +125,7 @@
           <a class="sidebar__social-icon" href="#" aria-label="youtube"
             ><img
               class="image sidebar__social-image"
-              src="src/assets/icons/youtube-icon.svg"
+              src="assets/icons/youtube-icon.svg"
               alt="youtube-social-icon"
           /></a>
         </li>
@@ -127,12 +135,12 @@
       <section class="hero parallax" data-speed="2">
         <img
           class="image hero__icon-septagon"
-          src="src/assets/icons/septagon-icon.svg"
+          src="assets/icons/septagon-icon.svg"
           alt="septagon-icon"
         />
         <img
           class="image hexagone hero__icon-hexagone"
-          src="src/assets/icons/hexagon-icon.svg"
+          src="assets/icons/hexagon-icon.svg"
           alt="hexagon-icon"
         />
         <div class="hero__content">
@@ -151,7 +159,7 @@
               <a href="#" class="cta hero__text-cta">JOIN</a>
               <img
                 class="image hero__text-icon-septagon"
-                src="src/assets/icons/septagon-icon.svg"
+                src="assets/icons/septagon-icon.svg"
                 alt="septagon-icon"
               />
             </div>
@@ -161,36 +169,36 @@
       <section class="animation">
         <img
           class="image animation__icon-dots animation__icon-dots--pink"
-          src="src/assets/icons/dots-pink-icon.svg"
+          src="assets/icons/dots-pink-icon.svg"
           alt="pink-dots"
         />
         <img
           class="image colored-arrow animation__icon-arrows"
-          src="src/assets/icons/colored-arrows-icon.svg"
+          src="assets/icons/colored-arrows-icon.svg"
           alt="arrows"
         />
         <div class="wrapper wrapper--animation">
           <img
             class="image animation__image"
-            src="/src/assets/images/laptop-code-image.png"
+            src="assets/images/laptop-code-image.png"
             alt="laptop-code"
           />
         </div>
         <img
           class="image animation__icon-dots animation__icon-dots--teal"
-          src="src/assets/icons/dots-teal-icon.svg"
+          src="assets/icons/dots-teal-icon.svg"
           alt="teal-dots"
         />
       </section>
       <section class="pygear">
         <img
           class="image nonagone pygear__icon-nonagone"
-          src="src/assets/icons/nonagone-icon.svg"
+          src="assets/icons/nonagone-icon.svg"
           alt="colored-arrows"
         />
         <img
           class="image dots pygear__icon-dots"
-          src="src/assets/icons/dots-orange-icon.svg"
+          src="assets/icons/dots-orange-icon.svg"
           alt="pink-dots"
         />
         <div class="wrapper wrapper--pygear">
@@ -219,14 +227,14 @@
               </div>
               <img
                 class="image colored-arrow pygear__icon-arrow"
-                src="src/assets/icons/colored-arrows-icon.svg"
+                src="assets/icons/colored-arrows-icon.svg"
                 alt="arrows"
               />
             </div>
             <div class="pygear__content-images">
               <img
                 class="image pygear__text-image"
-                src="src/assets/images/steps-image.png"
+                src="assets/images/steps-image.png"
                 alt="steps"
               />
             </div>
@@ -236,22 +244,22 @@
       <section class="whyus">
         <img
           class="image whyus__icon whyus__icon--nonagone-clear"
-          src="src/assets/icons/nonagone-clear-icon.svg"
+          src="assets/icons/nonagone-clear-icon.svg"
           alt="nonagone-clear-icon"
         />
         <img
           class="image whyus__icon whyus__icon--hexagons-dual"
-          src="src/assets/icons/hexagons-dual-icon.svg"
+          src="assets/icons/hexagons-dual-icon.svg"
           alt="hexagons-dual-icon"
         />
         <img
           class="image whyus__icon whyus__icon--dots-teal-large"
-          src="src/assets/icons/dots-teal-large-icon.svg"
+          src="assets/icons/dots-teal-large-icon.svg"
           alt="dots-teal-large-icon"
         />
         <img
           class="image whyus__icon whyus__icon--octagone"
-          src="src/assets/icons/octagone-icon.svg"
+          src="assets/icons/octagone-icon.svg"
           alt="octagone-icon"
         />
         <div class="wrapper wrapper--whyus">
@@ -313,25 +321,25 @@
       <section class="testimonials">
         <img
           class="image testimonials__hexagon-icon"
-          src="src/assets/icons/hexagon-clear-icon.svg"
+          src="assets/icons/hexagon-clear-icon.svg"
           alt="hexagon-clear-icon"
         />
         <div class="wrapper wrapper--testimonials">
           <img
             class="image testimonials__arrow-icon colored-arrow"
-            src="src/assets/icons/colored-arrows-icon.svg"
+            src="assets/icons/colored-arrows-icon.svg"
             alt="colored-arrow"
           />
           <div class="testimonials__content">
             <div class="testimonials__media">
               <img
                 class="image testimonials__media-user"
-                src="src/assets/images/user-bogdan.png"
+                src="assets/images/user-bogdan.png"
                 alt="user-bogdan"
               />
               <img
                 class="image testimonials__media-icon"
-                src="src/assets/icons/septagon-dual-icon.svg"
+                src="assets/icons/septagon-dual-icon.svg"
                 alt="septagon-dual-icon"
               />
             </div>
@@ -343,7 +351,7 @@
               <div class="testimonials__quote">
                 <img
                   class="image testimonials__quote-icon"
-                  src="src/assets/icons/quote-icon.svg"
+                  src="assets/icons/quote-icon.svg"
                   alt="quote-icon"
                 />
                 <p class="paragraph testimonials__quote-text">
@@ -369,7 +377,7 @@
               <figure class="contributor__box">
                 <img
                   class="image contributor__box-image"
-                  src="src/assets/images/dejan-markovic-image.png"
+                  src="assets/images/dejan-markovic-image.png"
                   alt="dejan-markovic-image"
                 />
                 <figcaption class="contributor__box-caption">
@@ -386,7 +394,7 @@
               <figure class="contributor__box">
                 <img
                   class="image contributor__box-image"
-                  src="src/assets/images/andrea-erdeljan-image.png"
+                  src="assets/images/andrea-erdeljan-image.png"
                   alt="andrea-erdeljan-image"
                 />
                 <figcaption class="contributor__box-caption">
@@ -403,7 +411,7 @@
               <figure class="contributor__box">
                 <img
                   class="image contributor__box-image"
-                  src="src/assets/images/stefan-sredojevic-image.png"
+                  src="assets/images/stefan-sredojevic-image.png"
                   alt="stefan-sredojevic-image"
                 />
                 <figcaption class="contributor__box-caption">
@@ -420,7 +428,7 @@
               <figure class="contributor__box">
                 <img
                   class="image contributor__box-image"
-                  src="src/assets/images/tim-ling-image.png"
+                  src="assets/images/tim-ling-image.png"
                   alt="tim-ling-image"
                 />
                 <figcaption class="contributor__box-caption">
@@ -437,7 +445,7 @@
               <figure class="contributor__box">
                 <img
                   class="image contributor__box-image"
-                  src="src/assets/images/kozomora-image.png"
+                  src="assets/images/kozomora-image.png"
                   alt="kozomora-image"
                 />
                 <figcaption class="contributor__box-caption">
@@ -454,7 +462,7 @@
               <figure class="contributor__box">
                 <img
                   class="image contributor__box-image"
-                  src="src/assets/images/mask-image.png"
+                  src="assets/images/mask-image.png"
                   alt="mask-image"
                 />
                 <figcaption class="contributor__box-caption">
@@ -473,17 +481,17 @@
           </h3>
           <img
             class="image dots contributors__icon contributors__icon--dots"
-            src="src/assets/icons/dots-pink-icon.svg"
+            src="assets/icons/dots-pink-icon.svg"
             alt="dots-pink-icon"
           />
           <img
             class="image colored-arrow contributors__icon contributors__icon--arrows"
-            src="src/assets/icons/colored-arrows-icon.svg"
+            src="assets/icons/colored-arrows-icon.svg"
             alt="colored-arrows-icon"
           />
           <img
             class="image hexagone contributors__icon contributors__icon--hexagon"
-            src="src/assets/icons/hexagon-icon.svg"
+            src="assets/icons/hexagon-icon.svg"
             alt="hexagone-icon"
           />
         </div>
@@ -499,42 +507,42 @@
             <a class="joinus__icon joinus__icon--discord" href="#">
               <img
                 class="image joinus__icon-image joinus__icon-image--discord"
-                src="src/assets/icons/discord-icon-hexagon.svg"
+                src="assets/icons/discord-icon-hexagon.svg"
                 alt="discord-icon-hexagon"
               />
             </a>
             <a class="joinus__icon joinus__icon--github" href="#">
               <img
                 class="image joinus__icon-image joinus__icon-image--github"
-                src="src/assets/icons/github-icon-octagon.svg"
+                src="assets/icons/github-icon-octagon.svg"
                 alt="github-icon-octagon"
               />
             </a>
             <a class="joinus__icon joinus__icon--stackoverflow" href="#">
               <img
                 class="image joinus__icon-image joinus__icon-image--stackoverflow"
-                src="src/assets/icons/stackoverflow-icon-nonagon.svg"
+                src="assets/icons/stackoverflow-icon-nonagon.svg"
                 alt="stackoverflow-icon-nonagon"
               />
             </a>
             <a class="joinus__icon joinus__icon--quora" href="#">
               <img
                 class="image joinus__icon-image joinus__icon-image--quora"
-                src="src/assets/icons/quora-icon-hexagon.svg"
+                src="assets/icons/quora-icon-hexagon.svg"
                 alt="quora-icon-hexagon"
               />
             </a>
             <a class="joinus__icon joinus__icon--reddit" href="#">
               <img
                 class="image joinus__icon-image joinus__icon-image--reddit"
-                src="src/assets/icons/reddit-icon-septagon.svg"
+                src="assets/icons/reddit-icon-septagon.svg"
                 alt="reddit-icon-septagon"
               />
             </a>
             <a class="joinus__icon joinus__icon--youtube" href="#">
               <img
                 class="image joinus__icon-image joinus__icon-image--youtube"
-                src="src/assets/icons/youtube-icon-octagon.svg"
+                src="assets/icons/youtube-icon-octagon.svg"
                 alt="youtube-icon-octagon"
               />
             </a>
@@ -544,17 +552,17 @@
       <section class="video">
         <img
           class="image nonagone video__icon video__icon--nonagone"
-          src="src/assets/icons/nonagone-icon.svg"
+          src="assets/icons/nonagone-icon.svg"
           alt="nonagone-icon"
         />
         <img
           class="image septagon video__icon video__icon--septagon"
-          src="src/assets/icons/septagon-icon.svg"
+          src="assets/icons/septagon-icon.svg"
           alt="septagon-icon"
         />
         <img
           class="image dots video__icon video__icon--dots"
-          src="src/assets/icons/dots-orange-icon.svg"
+          src="assets/icons/dots-orange-icon.svg"
           alt="dots-orange-icon"
         />
         <div class="wrapper wrapper--video">
@@ -563,13 +571,13 @@
             <div class="video-player">
               <video
                 class="video-player__video"
-                src="src/assets/videos/explaining-video.mp4"
-                poster="src/assets/images/explaining-video-thumbnail.png"
+                src="assets/videos/explaining-video.mp4"
+                poster="assets/images/explaining-video-thumbnail.png"
               ></video>
               <button class="video-player__play-btn" type="button">
                 <img
                   class="video-player__play-icon"
-                  src="src/assets/icons/play-icon-custom.svg"
+                  src="assets/icons/play-icon-custom.svg"
                   alt="play-icon-custom"
                 />
               </button>
@@ -580,17 +588,17 @@
       <section class="news">
         <img
           class="image dots news__icon news__icon--dots"
-          src="src/assets/icons/dots-teal-icon.svg"
+          src="assets/icons/dots-teal-icon.svg"
           alt="dots-teal-icon"
         />
         <img
           class="image colored-arrow news__icon news__icon--arrow"
-          src="src/assets/icons/colored-arrows-icon.svg"
+          src="assets/icons/colored-arrows-icon.svg"
           alt="colored-arrows-icon"
         />
         <img
           class="image septagon news__icon news__icon--septagon-lines"
-          src="src/assets/icons/septagon-icon-lines.svg"
+          src="assets/icons/septagon-icon-lines.svg"
           alt="septagon-icon-lines"
         />
         <div class="wrapper wrapper--news">
@@ -599,7 +607,7 @@
             <article class="news__card">
               <img
                 class="image news__card-image"
-                src="src/assets/images/image-thermal.png"
+                src="assets/images/image-thermal.png"
                 alt="thermal"
               />
               <time class="paragraph news__card-date" datetime="2022-02-13"
@@ -618,7 +626,7 @@
             <article class="news__card">
               <img
                 class="image news__card-image"
-                src="src/assets/images/image-thermal.png"
+                src="assets/images/image-thermal.png"
                 alt="thermal"
               />
               <time class="paragraph news__card-date" datetime="2022-02-13"
@@ -639,12 +647,12 @@
         </div>
         <img
           class="image octagone news__icon news__icon--octagone"
-          src="src/assets/icons/octagone-icon.svg"
+          src="assets/icons/octagone-icon.svg"
           alt="octagone-icon"
         />
         <img
           class="image colored-arrow news__icon news__icon--arrow-bot"
-          src="src/assets/icons/colored-arrows-icon.svg"
+          src="assets/icons/colored-arrows-icon.svg"
           alt="colored-arrows-icon"
         />
       </section>
@@ -652,7 +660,7 @@
     <footer class="footer">
       <img
         class="footer__icon"
-        src="src/assets/icons/dots-black-large.svg"
+        src="assets/icons/dots-black-large.svg"
         alt="dots-black-large"
       />
       <div class="wrapper wrapper--footer">
@@ -661,7 +669,7 @@
             <a class="footer__logo" href="#"
               ><img
                 class="image footer__logo-image"
-                src="src/assets/images/logo-image.png"
+                src="assets/images/logo-image.png"
                 alt="logo"
             /></a>
             <div class="footer__links-content">
@@ -681,7 +689,7 @@
                   <a class="footer__social-link" href="#" aria-label="github">
                     <img
                       class="footer__social-link-image"
-                      src="src/assets/icons/github-icon.svg"
+                      src="assets/icons/github-icon.svg"
                       alt="github-icon"
                     />
                   </a>
@@ -690,7 +698,7 @@
                   <a class="footer__social-link" href="#" aria-label="discord"
                     ><img
                       class="footer__social-link-image"
-                      src="src/assets/icons/discord-icon.svg"
+                      src="assets/icons/discord-icon.svg"
                       alt="discord-icon"
                   /></a>
                 </li>
@@ -702,7 +710,7 @@
                   >
                     <img
                       class="footer__social-link-image"
-                      src="src/assets/icons/stackoverflow-icon.svg"
+                      src="assets/icons/stackoverflow-icon.svg"
                       alt="stackoverflow-icon"
                     />
                   </a>
@@ -711,7 +719,7 @@
                   <a class="footer__social-link" href="#" aria-label="reddit"
                     ><img
                       class="footer__social-link-image"
-                      src="src/assets/icons/reddit-icon.svg"
+                      src="assets/icons/reddit-icon.svg"
                       alt="reddit-icon"
                   /></a>
                 </li>
@@ -719,7 +727,7 @@
                   <a class="footer__social-link" href="#" aria-label="quora"
                     ><img
                       class="footer__social-link-image"
-                      src="src/assets/icons/quora-icon.svg"
+                      src="assets/icons/quora-icon.svg"
                       alt="quora-icon"
                   /></a>
                 </li>
@@ -727,7 +735,7 @@
                   <a class="footer__social-link" href="#" aria-label="youtube"
                     ><img
                       class="footer__social-link-image"
-                      src="src/assets/icons/youtube-icon.svg"
+                      src="assets/icons/youtube-icon.svg"
                       alt="youtube-icon"
                   /></a>
                 </li>

@@ -1,0 +1,28 @@
+@use "variables";
+.loader {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: variables.$purple;
+  color: variables.$white;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  z-index: 99999;
+  &__spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(variables.$white, 0.2);
+    border-top-color: variables.$neonGreen;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+  }
+}
+.content {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

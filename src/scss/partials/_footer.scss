@@ -55,6 +55,7 @@
   max-height: 350px;
   width: 100%;
   height: auto;
+  z-index: -1;
 }
 .footer__social-link-image {
   @include mixins.transitionStandardTime;

@@ -1,6 +1,6 @@
 @use "mediaQueries";
 .pygear {
-  padding: 54px 0 0;
+  padding: 59px 0 0;
   position: relative;
 }
 .pygear__text {
@@ -34,7 +34,7 @@
 .pygear__icon-dots {
   position: absolute;
   left: 0;
-  bottom: 21%;
+  bottom: 17%;
 }
 // Media Queries
 @include mediaQueries.Desktop {

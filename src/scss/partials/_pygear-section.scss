@@ -26,7 +26,7 @@
   top: 19%;
   right: 26%;
 }
-.pygear__icon-nonagone {
+.pygear__icon-nonagon {
   position: absolute;
   right: 100px;
   top: 16%;
@@ -41,12 +41,12 @@
   .pygear__icon-arrow {
     top: 45%;
   }
-  .pygear__icon-nonagone {
+  .pygear__icon-nonagon {
     top: 50%;
   }
 }
 @include mediaQueries.Laptop {
-  .pygear__icon-nonagone {
+  .pygear__icon-nonagon {
     top: 60%;
   }
   .pygear__icon-arrow {
@@ -54,7 +54,7 @@
   }
 }
 @include mediaQueries.Tablet {
-  .pygear__icon-nonagone {
+  .pygear__icon-nonagon {
     opacity: 0.4;
   }
   .pygear__icon-arrow {
@@ -65,7 +65,7 @@
   .pygear__icon-dots {
     opacity: 0.2;
   }
-  .pygear__icon-nonagone {
+  .pygear__icon-nonagon {
     opacity: 0.2;
   }
   .pygear__icon-arrow {

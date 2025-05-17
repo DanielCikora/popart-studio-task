@@ -30,7 +30,7 @@
   display: block;
   position: absolute;
 }
-.video__icon--nonagone {
+.video__icon--nonagon {
   left: 131px;
   top: 111px;
   animation: floatAround 10s ease-in-out infinite;
@@ -44,18 +44,20 @@
   top: 0;
 }
 @include mediaQueries.CustomExtraLarge {
-  .video__icon--nonagone {
+  .video__icon--nonagon {
     top: 8%;
   }
   .video__icon {
     opacity: 0.4;
   }
+}
+@include mediaQueries.CustomLarge {
   .video__icon--dots {
-    top: 75%;
+    opacity: 0.4;
   }
 }
 @include mediaQueries.Laptop {
-  .video__icon--nonagone {
+  .video__icon--nonagon {
     display: none;
   }
   .video__icon--septagon {
@@ -69,7 +71,7 @@
     max-height: 50px;
     max-width: 50px;
   }
-  .video__icon--nonagone {
+  .video__icon--nonagon {
     left: 0px;
     top: 200px;
   }

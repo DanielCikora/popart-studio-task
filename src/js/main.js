@@ -6,14 +6,19 @@ const allContributors = document.querySelectorAll(".contributor");
 const icons = document.querySelectorAll(".joinus__icon");
 const video = document.querySelector(".video-player__video");
 const playBtn = document.querySelector(".video-player__play-btn");
+const loader = document.querySelector(".loader");
+const content = document.querySelector(".content");
+const parallaxEls = document.querySelectorAll(".parallax");
+
+// Scroll Header Effect
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    header.classList.add("header--scrolled");
-  } else {
-    header.classList.remove("header--scrolled");
+  if (header) {
+    header.classList.toggle("header--scrolled", window.scrollY > 100);
   }
 });
+
+// Hamburger Menu
 
 if (hamburgerButton && hamburgerMenu) {
   hamburgerButton.addEventListener("click", () => {
@@ -21,6 +26,8 @@ if (hamburgerButton && hamburgerMenu) {
     document.body.classList.toggle("no-scroll");
   });
 }
+
+// Why Us Animation
 
 const whyUsObserver = new IntersectionObserver(
   (entries) => {
@@ -36,15 +43,15 @@ const whyUsObserver = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.2,
-  }
+  { threshold: 0.2 }
 );
 
 whyUsBoxes.forEach((box, i) => {
   box.dataset.index = i;
   whyUsObserver.observe(box);
 });
+
+// Contributors Animation
 
 const contributorObserver = new IntersectionObserver(
   (entries) => {
@@ -65,6 +72,8 @@ allContributors.forEach((box, i) => {
   contributorObserver.observe(box);
 });
 
+// Icon Animation
+
 icons.forEach((icon, i) => {
   icon.style.setProperty("--delay", `${i * 0.2}s`);
 });
@@ -78,46 +87,48 @@ const iconObserver = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.3,
-  }
+  { threshold: 0.3 }
 );
 
 icons.forEach((icon) => {
   iconObserver.observe(icon);
 });
 
-playBtn.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    playBtn.style.opacity = 0;
-  } else {
-    video.pause();
-    playBtn.style.opacity = 1;
-  }
-});
+// Video Controls
+
+if (playBtn && video) {
+  playBtn.addEventListener("click", () => {
+    const isPaused = video.paused;
+    isPaused ? video.play() : video.pause();
+    playBtn.style.opacity = isPaused ? 0 : 1;
+  });
+}
+
+// Parallax
 
 document.addEventListener("scroll", () => {
   const scrolled = window.scrollY;
-  document.querySelectorAll(".parallax").forEach((el) => {
+  parallaxEls.forEach((el) => {
     const speed = parseFloat(el.dataset.speed) || 1;
     const offset = scrolled * (speed / 10);
     el.style.transform = `translateY(${offset}px)`;
   });
 });
 
+// Loader
+
 window.addEventListener("load", () => {
-  const loader = document.querySelector(".loader");
-  const content = document.querySelector(".content");
   setTimeout(() => {
-    loader.style.opacity = "0";
-    loader.addEventListener(
-      "transitionend",
-      () => {
-        loader.style.display = "none";
-        content.classList.remove("hidden");
-      },
-      { once: true }
-    );
+    if (loader) {
+      loader.style.opacity = "0";
+      loader.addEventListener(
+        "transitionend",
+        () => {
+          if (loader) loader.style.display = "none";
+          if (content) content.classList.remove("content--hidden");
+        },
+        { once: true }
+      );
+    }
   }, 3000);
 });

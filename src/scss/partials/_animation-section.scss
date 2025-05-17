@@ -2,42 +2,44 @@
 @use "mediaQueries";
 .animation {
   position: relative;
-}
-.animation__image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.animation__icon-dots {
-  max-height: 190px;
-  width: fit-content;
-}
-.animation__icon-dots--pink {
-  margin-right: auto;
-}
-.animation__icon-dots--teal {
-  margin-left: auto;
-}
-.animation__icon-arrows {
-  position: absolute;
-  top: 23px;
-  left: 47.5%;
-  transform: translateX(-50%);
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__icon-dots {
+    max-height: 190px;
+    width: fit-content;
+    &--pink {
+      margin-right: auto;
+    }
+    &--teal {
+      margin-left: auto;
+    }
+  }
+  &__icon-arrows {
+    position: absolute;
+    top: 23px;
+    left: 47.5%;
+    transform: translateX(-50%);
+  }
 }
 // Media Queries
 @include mediaQueries.Tablet {
   .wrapper--animation {
     padding-top: 0;
   }
-  .animation__icon-arrows {
-    left: auto;
-    transform: none;
-    right: 0;
-    top: 50px;
-    bottom: 0;
-  }
-  .animation__icon-dots {
-    max-height: 100px;
-    padding: 20px 0;
+  .animation {
+    &__icon-arrows {
+      left: auto;
+      transform: none;
+      right: 0;
+      top: 50px;
+      bottom: 0;
+    }
+    &__icon-dots {
+      max-height: 100px;
+      padding: 20px 0;
+    }
   }
 }

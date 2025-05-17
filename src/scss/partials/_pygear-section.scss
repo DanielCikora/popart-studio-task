@@ -54,20 +54,14 @@
   }
 }
 @include mediaQueries.Tablet {
-  .pygear__icon-nonagon {
-    opacity: 0.4;
-  }
+  .pygear__icon-nonagon,
   .pygear__icon-arrow {
     opacity: 0.4;
   }
 }
 @include mediaQueries.MobileL {
-  .pygear__icon-dots {
-    opacity: 0.2;
-  }
-  .pygear__icon-nonagon {
-    opacity: 0.2;
-  }
+  .pygear__icon-dots,
+  .pygear__icon-nonagon,
   .pygear__icon-arrow {
     opacity: 0.2;
   }
